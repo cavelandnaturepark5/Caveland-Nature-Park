@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="index.js">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap" rel="stylesheet">
+    <title>Home Page</title>
+</head>
+<body>
+    <!----------------------------------------------------------HEADER--------------------------------------------------------->
+    <header>
+        <div class="logo">
+            <img src="images/logo.jpg" alt="Logo" class="logo-img">
+        </div>
+        <nav>
+            <ul class="nav-items" id="nav-items">
+                <li><a href="#home">HOME</a></li>
+                <li><a href="#about">ABOUT US</a></li>
+                <li>
+                    <a href="#services" class="dropdown-toggle">OFFERS <span class="arrow-down">▼</span></a>
+                    <ul class="dropdown">
+                        <li><a href="#web-design" class="service-item">ROOMS</a></li>
+                        <li><a href="#swimming-pool" class="service-item">SWIMMING POOL</a></li>
+                        <li><a href="#caves" class="service-item">CAVES</a></li>
+                        <li><a href="#seo" class="service-item">ADVENTURES</a></li>
+                    </ul>
+                </li>
+                <li><a href="#contact">CONTACT US</a></li>
+            </ul>
+            <div class="button-container">
+                <button class="cta">BOOK NOW</button>
+                <button class="phone-button">
+                    <img src="https://picsum.photos/seed/vfTedrYj-W7n3sofbWPaJ/512" alt="Phone" class="log-img">
+                    <span class="phone-text">09462069394</span>
+                </button>
+            </div>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+    <div class="fullscreen-menu" id="fullscreen-menu">
+        <button class="exit-button" id="exit-button">✖</button>
+        <ul class="fullscreen-items">
+            <li><a href="#home">HOME</a></li>
+            <li><a href="#about">ABOUT US</a></li>
+            <li>
+                <a href="#services" class="dropdown-toggle">OFFERS <span class="arrow-down">▼</span></a>
+                <ul class="dropdown">
+                    <li><a href="#web-design" class="service-item">ROOMS</a></li>
+                    <li><a href="#swimming-pool" class="service-item">SWIMMING POOL</a></li>
+                    <li><a href="#caves" class="service-item">CAVES</a></li>
+                    <li><a href="#seo" class="service-item">ADVENTURES</a></li>
+                </ul>
+            </li>
+            <li><a href="#contact">CONTACT US</a></li>
+            <li>
+                <button class="cta">BOOK NOW</button>
+            </li>
+            <li>
+                <button class="phone-button">
+                    <img src="https://picsum.photos/seed/puB2DgmkykVY49pFH0x33/512" alt="Phone" class="log-img">
+                    <span class="phone-text">09462069394</span>
+                </button>
+            </li>
+        </ul>
+    </div>
+    <main>
+            <!----------------------------------------------------------HOME--------------------------------------------------------->
+        <section id="home" class="home-section">
+            <h2> CAVELAND  NATURE <br> PARK <br> </h2>
+            <p>
+                <img src="images/location.png" alt="Location" class="location"> 
+                <span> DOLORES,  DUMALAG,  CAPIZ </span>
+            </p>
+            <button class="booking-button"> DISCOVER  MORE </button>
+        </section>
+                <div class="booking-system">
+                    <form class="booking-form" id="bookingForm">
+                        <div class="form-group">
+                            <input type="text" id="name" name="name" placeholder="Enter your name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="date" id="date" name="date" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="time" id="time" name="time" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="number" id="people" name="people" placeholder="Number of guests" required min="1" max="100">
+                        </div>
+                        <div class="form-group">
+                            <button type="submit" class="book-button">BOOK NOW</button>
+                        </div>
+                    </form>
+                </div>
+            </section>
+                
+            </body>
+        </htm>
