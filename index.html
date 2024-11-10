@@ -1,107 +1,867 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="index.css">
-    <link rel="stylesheet" href="index.js">
-    
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap" rel="stylesheet">
-    <title>Home Page</title>
+  <title>Caveland Nature Park</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="index.css">
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+  <link rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+  integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+  crossorigin="anonymous"
+  referrerpolicy="no-referrer"/>
 </head>
+
+
 <body>
-    <!----------------------------------------------------------HEADER--------------------------------------------------------->
-    <header>
-        <div class="logo">
-            <img src="images/logo.jpg" alt="Logo" class="logo-img">
-        </div>
-        <nav>
-            <ul class="nav-items" id="nav-items">
-                <li><a href="#home">HOME</a></li>
-                <li><a href="#about">ABOUT US</a></li>
-                <li>
-                    <a href="#services" class="dropdown-toggle">OFFERS <span class="arrow-down">▼</span></a>
-                    <ul class="dropdown">
-                        <li><a href="#web-design" class="service-item">ROOMS</a></li>
-                        <li><a href="#swimming-pool" class="service-item">SWIMMING POOL</a></li>
-                        <li><a href="#caves" class="service-item">CAVES</a></li>
-                        <li><a href="#seo" class="service-item">ADVENTURES</a></li>
-                    </ul>
-                </li>
-                <li><a href="#contact">CONTACT US</a></li>
-            </ul>
-            <div class="button-container">
-                <button class="cta">BOOK NOW</button>
-                <button class="phone-button">
-                    <img src="https://picsum.photos/seed/vfTedrYj-W7n3sofbWPaJ/512" alt="Phone" class="log-img">
-                    <span class="phone-text">09462069394</span>
-                </button>
-            </div>
-            <div class="hamburger" id="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
+
+
+<!---------------------------------------------NAVBAR---------------------------------------------------------------------------->
+  <header class="header" id="navigation-menu">
+    <div class="container">
+      <nav>
+        <a href="#" class="logo"> <img src="images/logo.jpg" alt=""> </a>
+          <ul class="nav-menu">
+            <li> <a href="#home" class="nav-link">HOME</a> </li>
+            <li> <a href="#about" class="nav-link">ABOUT</a> </li>
+            <li class="dropdown">
+        <a href="#" class="nav-link dropdown-toggle">OFFERS <span class="arrow-down">▼</span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#caves" class="dropdown-link">CAVES</a></li>
+            <li><a href="#pool" class="dropdown-link">POOL</a></li>
+            <li><a href="#adventures" class="dropdown-link">ADVENTURES</a></li>
+            <li><a href="#rooms" class="dropdown-link">ROOMS</a></li>
+          </ul>
+            </li>
+            <li> <a href="#booking" class="nav-link">BOOKING</a> </li>
+            <li> <a href="#contact" class="nav-link">CONTACT</a> </li>
+         </ul>
+          <div class="hambuger">
+              <span class="bar"></span>
+              <span class="bar"></span>
+              <span class="bar"></span>
             </div>
         </nav>
-    </header>
-    <div class="fullscreen-menu" id="fullscreen-menu">
-        <button class="exit-button" id="exit-button">✖</button>
-        <ul class="fullscreen-items">
-            <li><a href="#home">HOME</a></li>
-            <li><a href="#about">ABOUT US</a></li>
-            <li>
-                <a href="#services" class="dropdown-toggle">OFFERS <span class="arrow-down">▼</span></a>
-                <ul class="dropdown">
-                    <li><a href="#web-design" class="service-item">ROOMS</a></li>
-                    <li><a href="#swimming-pool" class="service-item">SWIMMING POOL</a></li>
-                    <li><a href="#caves" class="service-item">CAVES</a></li>
-                    <li><a href="#seo" class="service-item">ADVENTURES</a></li>
-                </ul>
-            </li>
-            <li><a href="#contact">CONTACT US</a></li>
-            <li>
-                <button class="cta">BOOK NOW</button>
-            </li>
-            <li>
-                <button class="phone-button">
-                    <img src="https://picsum.photos/seed/puB2DgmkykVY49pFH0x33/512" alt="Phone" class="log-img">
-                    <span class="phone-text">09462069394</span>
-                </button>
-            </li>
-        </ul>
+      </div>
+  </header>
+
+
+<!-------------------------------------------------HOME------------------------------------------------------------------------>
+<section class="home-section" id="home">
+  <div class="home-content">
+    <h1>CAVELAND NATURE<br>PARK</h1>
+      <p>
+        <img src="images/location.png" alt="Location" class="location"> 
+        <span> DOLORES,  DUMALAG,  CAPIZ</span> 
+      </p>
+      <a href="your-link-here" class="head-btn">DISCOVER MORE</a>
+  </div>
+  <div class="booking-container">
+    <div class="booking-system">
+      <form class="booking-form" id="bookingForm">
+          <div class="form-group">
+            <input type="text" id="name" name="name" placeholder="Enter your name" required>
+          </div>
+          <div class="form-group date-placeholder">
+            <input type="date" id="date" name="date" required>
+          </div>
+          <div class="form-group">
+            <input type="time" id="time" name="time" required>
+          </div>
+          <div class="form-group">
+            <input type="number" id="people" name="people" placeholder="Number of guests" required min="1" max="100">
+          </div>
+          <div class="form-group">
+            <button type="submit" class="book-button">BOOK NOW</button>
+          </div>
+      </form>
     </div>
-    <main>
-            <!----------------------------------------------------------HOME--------------------------------------------------------->
-        <section id="home" class="home-section">
-            <h2> CAVELAND  NATURE <br> PARK <br> </h2>
-            <p>
-                <img src="images/location.png" alt="Location" class="location"> 
-                <span> DOLORES,  DUMALAG,  CAPIZ </span>
-            </p>
-            <button class="booking-button"> DISCOVER  MORE </button>
-        </section>
-                <div class="booking-system">
-                    <form class="booking-form" id="bookingForm">
-                        <div class="form-group">
-                            <input type="text" id="name" name="name" placeholder="Enter your name" required>
-                        </div>
-                        <div class="form-group">
-                            <input type="date" id="date" name="date" required>
-                        </div>
-                        <div class="form-group">
-                            <input type="time" id="time" name="time" required>
-                        </div>
-                        <div class="form-group">
-                            <input type="number" id="people" name="people" placeholder="Number of guests" required min="1" max="100">
-                        </div>
-                        <div class="form-group">
-                            <button type="submit" class="book-button">BOOK NOW</button>
-                        </div>
-                    </form>
+  </div>
+</section>
+
+
+<!------------------------------------------------ABOUT------------------------------------------------------------------------>
+<section class="about top" id="about">
+      <div class="container flex">
+        <div class="left">
+          <div class="img">
+            <img src="images/entrance/entranceww.jpeg" alt="" class="image1">
+            <img src="images/resort and park.jpeg" alt="" class="image2">
+          </div>
+        </div>
+        <div class="right">
+          <div class="text">
+          <div class="heading">
+              <h5>EXPERIENCE NATURE, COMFORT, ANDVENTURE</h5>
+              <h2>Welcome to Caveland Nature Park and Resort</h2>
+              </div>
+          <div class="accordionWrapper">
+            <div class="accordionItem open">
+              <h2 class="accordionIHeading">History</h2>
+              <div class="accordionItemContent">
+                <p>In the foothills by Suhot Spring, covered by lush vegetation and overgrown trees, lies a network of subterranean caves, carved by water-a series of voids and chambers that sits on a solid limestone foundation and adorned with various types of stalactites, developed by the constant dripping of rainforest water. Thousands of years ago, water receded from the cave formations, revealing fossils of fresh water shells imbedded at the foothill along the walls of Suhot caves. The Firmaling family, owners of the estate, called the place "kaCuevaban", now known as Caveland Park.
+                </p>
+              </div>
+            </div>
+            <div class="accordionItem close">
+              <h2 class="accordionIHeading">Mission</h2>
+              <div class="accordionItemContent">
+                <p>To exceed guests expectations, inspire and motivate employees, and to achieve excellent financial results.
+                </p>
+              </div>
+            </div>
+            <div class="accordionItem close">
+              <h2 class="accordionIHeading">Vision</h2>
+              <div class="accordionItemContent">
+                <p>To be recognizable as one of the leading organization in tourism industry committed in the continuous development of quality services and to be consistent in promotion of excellence, novelties, and future development.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+</section>
+
+
+<!-----------------------------------------------ABOUT TEAM------------------------------------------------------------------>
+<section class="team">
+      <div class="container">
+          <div class="heading">
+              <h5>FRIENDLY, ATTENTIVE, SKILLED, DEDICATED STAFF</h5>
+              <h2>RESORT PERSONNELS</h2>
+      <div class="team-member">
+          <h3>Atty. Ephraim Firmalino </h3>
+          <p>CEO / Owner </p>
+      </div>
+      <div class="team-grid">
+          <div class="team-member">
+              <h3>Paula Arinquin </h3>
+              <p>Administrator</p>
+          </div>
+          <div class="team-member">
+              <h3>Lexly Jane F. Caranguian </h3>
+              <p>Accounts Manager </p>
+          </div>
+          <div class="team-member">
+              <h3>Michelle Bajador </h3>
+              <p>Resort Manager </p>
+          </div>
+          <div class="team-member">
+              <h3>Rolando Faulve </h3>
+              <p>Park Supervisor</p>
+          </div>
+          <div class="team-member"> 
+              <h3> Jessa Mae Haberle </h3>
+              <p>Cashier</p>
+          </div>
+          <div class="team-member">
+              <h3>Julieanne Marie Faulve </h3>
+              <p>Cashier</p>
+          </div>
+          <div class="team-member">
+              <h3>Nico Val Bantegui </h3>
+              <p> Guard </p>
+          </div>
+          <div class="team-member">
+              <h3>Vilor Ortiz </h3>
+              <p> Guard </p>
+          </div>
+          <div class="team-member">
+              <h3>Martin Cervas </h3>
+              <p> Guard </p>
+          </div>
+          <div class="team-member">
+              <h3>Jinky Fama </h3>
+              <p> Cook  </p>
+          </div>
+          <div class="team-member">
+              <h3>Richelle Evangelio </h3>
+              <p>Room & Park Staff </p>
+          </div>
+          <div class="team-member">
+              <h3> Antonio Fuasan </h3>
+              <p> Maintenance </p>
+          </div>
+      </div>
+      </div>
+</section>
+
+
+<!-----------------------------------------------ABOUT RATES---------------------------------------------------------------->
+<section>
+  <div class="conta">
+      <div class="container">
+          <div class="heading">
+              <h5>AFFORDABLE RATES, EXCEPTIONAL VALUE GUARANTEED</h5>
+              <h2>PRICES</h2>
+      <table id="offersTable">
+          <thead>
+              <tr>
+                  <th>Offers</th>
+                  <th></th>
+                  <th>Prices</th>
+              </tr>
+          </thead>
+          <tbody>
+              <tr>
+                  <td>Entrance</td>
+                  <td class="description">Adults</td>
+                  <td class="price">50 Pesos</td>
+              </tr>
+              <tr>
+                  <td></td>
+                  <td class="description">Children (3 feet below free)</td>
+                  <td class="price">35 Pesos</td>
+              </tr>
+              <tr>
+                  <td></td>
+                  <td class="description">Senior</td>
+                  <td class="price">35 Pesos</td>
+              </tr>
+              <tr>
+                  <td>Swimming Pool</td>
+                  <td class="description">Adults</td>
+                  <td class="price">100 Peses</td>
+              </tr>
+              <tr>
+                  <td></td>
+                  <td class="description">Children (3 feet below free)</td>
+                  <td class="price">80 Pesos</td>
+              </tr>
+              <tr>
+                <td></td>
+                <td class="description">Seniors</td>
+                <td class="price">80 Pesos</td>
+            </tr>
+              <tr>
+                  <td>Accomodation</td>
+                  <td class="description">Rock Cabin (all included for 2 person)</td>
+                  <td class="price">2,500 Pesos</td>
+              </tr>
+              <tr>
+                  <td></td>
+                  <td class="description">Twin Cabin</td>
+                  <td class="price">1, 800 Pesos</td>
+              </tr>
+              <tr>
+                  <td>Cottages</td>
+                  <td class="description">Gazebo Red</td>
+                  <td class="price">750 Pesos</td>
+              </tr>
+              <tr>
+                  <td></td>
+                  <td class="description">Gazebo Green</td>
+                  <td class="price">750 Pesos</td>
+              </tr><tr>
+                  <td></td>
+                  <td class="description">Gazebo Nipa</td>
+                  <td class="price">400 Pesos</td>
+              </tr><tr>
+                  <td>Soaking Pools (for 4 hours with floating food tray)</td>
+                  <td class="description">Big</td>
+                  <td class="price">1,000 Pesos</td>
+              </tr>
+              <tr>
+                  <td></td>
+                  <td class="description">Medium</td>
+                  <td class="price">800 Pesos</td>
+              </tr><tr>
+                  <td></td>
+                  <td class="description">Small</td>
+                  <td class="price">700 Pesos</td>
+              </tr><tr>
+                  <td>Parties</td>
+                  <td class="description">Venue Pavillion Only (Up to 100 persons)</td>
+                  <td class="price">10,000Pesos</td>
+              </tr>
+              <tr>
+                  <td></td>
+                  <td class="description">Venue with Wedding Gazebo (Up to 100 persons)</td>
+                  <td class="price">13,000 Pesos</td>
+              </tr><tr>
+                  <td></td>
+                  <td class="description">Catering</td>
+                  <td class="price">Call</td>
+              </tr><tr>
+                  <td>Tour Package (Educational, Tourist & Stop Over)</td>
+                  <td class="description"></td>
+                  <td class="price">350 Pesos Per Person</td>
+              </tr>
+          </tbody>
+      </table>
+  </div>
+</section>
+
+
+<!----------------------------------------------ABOUT RULES------------------------------------------------------------------>
+<section>
+  <button id="openModal">RULES & REGULATIONS OF CAVELAND</button>
+  <div id="termsModal" class="modal">
+      <div class="modal-content">
+          <span class="close-button">&times;</span>
+          <h2>Rules and Regulations</h2>
+          <div class="rules-box">
+              <div class="rules-content">
+                  <ul>
+                      <li class="rule-item">
+                          <span>Parking charge is Php. 50 for Private Vehicles; Php. 100 for UV and Php. 20 for Motorcycle and Tricycle.</span>
+                         
+                      </li>
+                      <li class="rule-item">
+                          <span>Observe proper swimming attire. (ALLOWED: Swim wear, white t-sirt, board shorts, swimming trunks, rash guard, spandex, or nylon.) (NOT ALOOWED: Colored t-sirts, denim or maongs, basketball shorts.)</span>
+                          
+                      </li>
+                      <li class="rule-item">
+                          <span>Guest/s is required to rent a cottage if they stay overnight.</span>
+                          
+                      </li>
+                      <li class="rule-item">
+                          <span>Jumping and diving in the pools is STRICTLY PROHIBITED</span>
+                         
+                      </li>
+                      <li class="rule-item">
+                          <span>Firearms and deadly weapons are STRICTLY PROHIBITED.</span>
+                         
+                      </li>
+                      <li class="rule-item">
+                          <span>Alcohol, cigarettes and prohibited drugs are STRICTLY PROHIBITED</span>
+                         
+                      </li>
+                      <li class="rule-item">
+                          <span>Persons who are under the influence of alcohol and drugs will be refused entry to the Park.</span>
+                          
+                      </li>
+                      <li class="rule-item">
+                          <span>Our Park personnel have the authority to confiscate your cigarette, liquors or any alcoholic beverages.</span>
+                         
+                      </li>
+                      <li class="rule-item">
+                          <span>SMOKING AREA is provided near the parking area.</span>
+                         
+                      </li>
+                      <li class="rule-item">
+                          <span>Do not leave you valuable things unattended.</span>
+                         
+                      </li>
+                      <li class="rule-item">
+                          <span>NO guest/s can use the swimming pools when there's NO LIFE GUARD on duty.</span>
+                         
+                      </li>
+                      <li class="rule-item">
+                          <span>Parents and Guardian are primary responsible for the behavior and safety of their children.</span>
+                         
+                      </li>
+                      <li class="rule-item">
+                          <span>Children ages 10 years of age and below are not allowed to use the pools unless accompanied by an adult.</span>
+                        
+                      </li>
+                      <li class="rule-item">
+                          <span>Wearing of jewelries (e.g. necklace, earrings, anklets, bracelets) and any other metal objects are NOT ALLOWED in the Swimming pool.</span>
+                         
+                      </li>
+                      <li class="rule-item">
+                          <span>A cleansing shower must be taken before entering the pool.</span>
+                        
+                      </li>
+                      <li class="rule-item">
+                          <span>Infants must wear swimsuits if in the pool. APPROVED SWIM DIAPERS ARE REQUIRED IF THEY ARE TAKEN IN THE WATER.</span>
+                          
+                      </li>
+                      <li class="rule-item">
+                          <span>No band aides or people with open wounds, stiches or skin diseases are allowed in the pool.</span>
+                         
+                      </li>
+                      <li class="rule-item">
+                          <span>In case of minor or major injuries, immediately report it to our park personnel. Resort clinic is located at CAVELAND’S OFFICE.</span>
+                          
+                      </li>
+                      <li class="rule-item">
+                          <span>NO LITTERING. Dispose your garbage properly.</span>
+                         
+                      </li>
+                      <li class="rule-item">
+                          <span>Any damages to the property of the resort due to improper use or negligence will be charge to the person/s concerned.</span>
+                          
+                      </li>
+                      <li class="rule-item">
+                          <span>The lifeguard on duty has the authority to suspend pool privileges if rules are violated.</span>
+                          
+                      </li>
+                      <li class="rule-item">
+                          <span>Any person who violates park regulations is subject to disciplinary action by our staff personnel/staff.</span>
+                          
+                      </li>
+                      <li class="rule-item">
+                          <span>Ask staff when entering any of the caves or when they need a tour guide.</span>
+                          
+                      </li>
+                      <li class="rule-item">
+                          <span>DO NOT TOUCH STALACTITES, ATALAGMITES OR BIRDS NEST INSIDE THE CAVES.</span>
+                         
+                      </li>
+                      <li class="rule-item">
+                          <span>Follow the load limits for the hanging bridge and No playing or jumping inside,</span>
+                         
+                      </li>
+                      <li class="rule-item">
+                          <span>Always walk on the right side of all walkways within the park.</span>
+                          
+                      </li>
+                      <li class="rule-item">
+                          <span>Do not destroy, pick or remove any display, plants and stones/rocks in the park.</span>  
+                      </li> 
+                  </ul>
+              </div>
+              </div>
+          </div>
+      </div>
+    </div>
+</section>
+
+
+<!----------------------------------------------CAVES------------------------------------------------------------------------>
+<section class = "customers" id="caves" >
+  <div class="container">
+    <div class="heading1">
+     <h5>DEPTH, DARKNESS, WONDER</h5>
+     <h2>CAVES</h2>
+   </div>
+   </div>
+    <div class = "sec-width">
+        <div class = "customers-container">
+            <div class = "customer">
+                <h3>MAN CAVE</h3><br><br>
+                <p>Man Cave is a spectacular refuge to visit and relax in privacy, gazing at the sky over the rock-forming bridge, supported by pillars and walls of stalactites and stalagmites. </p>
+                <img src = "images/caves/horror cave.jpeg" alt = "customer image">
+            </div>
+            <div class = "customer">
+                <h3>CHOCOLATE CAVE</h3><br><br>
+                <p>Chocolate Cave, its name was inspired by the color of the walls and stalactites nicely trickling.</p>
+                <img src = "images/caves/choocaaave.jpeg" alt = "customer image">
+            </div>
+            <div class = "customer">
+                <h3>RAINFOREST CAVE</h3><br><br>
+                <p> Rainforest Cave, a shelter cave used by natives (Aeta) while hunting deer, wild pig, monkey and even water monitor Lizard (halo). </p>
+                <img src = "images/caves/rainforest cave.jpeg" alt = "customer image">
+            </div>
+            <div class = "customer">
+              <h3>HOLY CAVE</h3><br><br>
+              <p>Holy Cave, which houses a grotto that is shaped with a likeness to the Virgin Mary of Fatima, complete with a peaceful surrounding area that is suitable for praying and meditation. </p>
+              <img src = "images/received_571245835259556.jpeg" alt = "customer image">
+          </div>
+        </div>
+    </div>
+</section>
+
+
+<!----------------------------------------------POOL------------------------------------------------------------------------>
+<section class="wrapper top" id="pool">
+      <div class="container">
+        <div class="text">
+          <h2>SWIMMING POOL</h2>
+          <p>CLEANLINESS: <br> USE SHOWER BEFORE SWIMMING.<br> DON'S USE SANDO /T-SIRT WHILE SWIMMING.<br> STRICTLY USE COMFORT ROOM BEFORE SWIMMING.<br> PLEASE WASH YOUR FEET BEFORE SWIMMING.</p>
+          <div class="content">
+            <div class="box flex">
+              <span>Adults</span>
+            </div>
+            <div class="box flex">
+              
+              <span>100 Pesos</span>
+            </div>
+            <div class="box flex">
+             
+              <span>Childrens</span>
+            </div>
+            <div class="box flex">
+              
+              <span>80 Pesos</span>
+            </div>
+            <div class="box flex">
+              
+              <span>Seniors</span>
+            </div>
+            <div class="box flex">
+              
+              <span>80 Pesos</span>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+</section>
+<section class="wrapper3 top" >
+    <div class="container">
+    </div>
+</section>
+
+
+<!---------------------------------------------ADVENTURES------------------------------------------------------------------->
+<section class="activities" id="adventures">
+  <div class="heading">
+    <h5>DISCOVER HIDDEN ACTIVITIES</h5>
+    <h2>ADVENTURES</h2>
+  </div>
+      <div class="tab-links">
+          <span data-target="skywalking" class="active">Skywalking</span>
+          <span data-target="hanging-bridge">Hanging Bridge</span>
+          <span data-target="zipline">Zipline</span>
+      </div>
+      <div class="activity" id="skywalking">
+          <h2></h2>
+          <p>Experience breathtaking views while walking high above the ground.</p>
+          <div class="images">
+            <img src="images/adventures/skywalking/sky3.jpeg" alt="Hanging Bridge Adventure 1">
+              <img src="images/adventures/skywalking/sky2.jpeg" alt="Hanging Bridge Adventure 2">
+              <img src="images/adventures/skywalking/sky7.jpeg" alt="Hanging Bridge Adventure 3">
+              
+          </div>
+      </div>
+      <div class="activity" id="hanging-bridge" style="display: none;">
+          <h2></h2>
+          <p>Cross our thrilling hanging bridge surrounded by nature.</p>
+          <div class="images">
+            <img src="images/adventures/hanging bridge/brigde2.jpeg" alt="Skywalking Adventure 1">
+            <img src="images/received_927355315872101.jpeg" alt="Skywalking Adventure 2">
+            <img src="images/brigde32.jpeg" alt="Skywalking Adventure 3">
+          </div>
+      </div>
+      <div class="activity" id="zipline" style="display: none;">
+         
+          <p>Feel the adrenaline rush while soaring over the treetops.<br>(COMING SOON)</p>
+          <div class="images">
+              <img src="images/mountain-zipline-pine-free-vector.jpg" alt="Zipline Adventure 1">
+              <img src="images/65cd383c43bad5e459c1c57f_Zipline-safety.jpg" alt="Zipline Adventure 2">
+              <img src="images/zipline-hero-1.png" alt="Zipline Adventure 3">
+          </div>
+      </div>
+</section>
+ 
+
+<!---------------------------------------------ROOMS------------------------------------------------------------------------>
+<section>
+  <div class="container" id="rooms">
+ <div class="heading">
+  <h5>COSY, SCENIC, UNIQUE</h5>
+  <h2>ROOMS</h2>
+</div>
+</div>
+</section>
+<section class="cards-wrapper">
+  <div class="card-grid-space">
+    <div class="num">01</div>
+    <a class="card" href="#booking" style="--bg-img: url('images/rooms/room1/room1b.jpeg')">
+      <div>
+        <div class="tags">
+          <div class="tag">BOOK NOW</div>
+        </div>
+      </div>
+    </a>
+  </div>
+  <div class="card-grid-space">
+    <div class="num"></div>
+    <a class="card" href="#booking" style="--bg-img: url('images/rooms/room1/room 1a.jpeg')">
+      <div>
+        <div class="tags">
+          <div class="tag">BOOK NOW</div>
+        </div>
+      </div>
+    </a>
+  </div>
+  <div class="card-grid-space">
+    <div class="num"></div>
+    <a class="card" href="#booking" style="--bg-img: url('images/rooms/room1/room 1 cr.jpeg')">
+      <div>
+        <div class="tags">
+          <div class="tag">BOOK NOW</div>
+        </div>
+      </div>
+    </a>
+  </div>
+  <div class="card-grid-space">
+    <div class="num">02</div>
+    <a class="card" href="#booking" style="--bg-img: url('images/rooms/room2/room2b.jpeg')">
+      <div>
+        <div class="tags">
+          <div class="tag">BOOK NOW</div>
+        </div>
+      </div>
+    </a>
+  </div>
+  <div class="card-grid-space">
+    <div class="num"></div>
+    <a class="card" href="#booking" style="--bg-img: url('images/rooms/room2/room2.jpeg')">
+      <div>
+        <div class="tags">
+          <div class="tag">BOOK NOW</div>
+        </div>
+      </div>
+    </a>
+  </div>
+  <div class="card-grid-space">
+    <div class="num"></div>
+    <a class="card" href="#booking" style="--bg-img: url('images/rooms/room2/room2d.jpeg')">
+      <div>
+        <div class="tags">
+          <div class="tag">BOOK NOW</div>
+        </div>
+      </div>
+    </a>
+  </div>
+  <div class="card-grid-space">
+    <div class="num">03</div>
+    <a class="card" href="#booking" style="--bg-img: url('images/rooms/room3/room3a.jpeg')">
+      <div>
+        <div class="tags">
+          <div class="tag">BOOK NOW</div>
+        </div>
+      </div>
+    </a>
+  </div>
+  <div class="card-grid-space">
+    <div class="num"></div>
+    <a class="card" href="#booking" style="--bg-img: url('images/rooms/room3/room3.jpeg')">
+      <div>
+        <div class="tags">
+          <div class="tag">BOOK NOW</div>
+        </div>
+      </div>
+    </a>
+  </div>
+  <div class="card-grid-space">
+    <div class="num"></div>
+    <a class="card" href="#booking" style="--bg-img: url('images/rooms/room3/room3.jpeg')">
+      <div>
+        <div class="tags">
+          <div class="tag">BOOK NOW</div>
+        </div>
+      </div>
+    </a>
+  </div>
+</section>
+
+
+<!------------------------------------------PAVILLION----------------------------------------------------------------------->
+<section class = "bars" >
+          <div class="container">
+            <div class="heading1">
+             <h5>VERSATILE, ATMOSPHERIC, SPACIOUS</h5>
+             <h2>PAVILLION</h2>
+           </div>
+           </div>
+          <div class = "sec-width">
+              <div class = "customers-container">
+                  <div class = "pav">
+                    <img src = "images/rooms/pavillion/pavillion3.jpeg" alt = "customer image">  
+                  </div>
+                  <div class = "pav">
+                      <img src = "images/rooms/pavillion/pavillion66.jpeg" alt = "customer image">
+                  </div>
+                  <div class = "pav">
+                       <img src = "images/rooms/pavillion/pavillion 4.jpeg" alt = "customer image">
+                  </div>
+                  <div class = "pav">
+                    <img src = "images/rooms/pavillion/pavillion1.jpeg" alt = "customer image">
                 </div>
-            </section>
-                
-            </body>
-        </htm>
+                <div class = "pav">
+                  <img src = "images/rooms/pavillion/pavillion5.jpeg" alt = "customer image">
+              </div>
+              <div class = "pav">
+                <h3>PAVILLION</h3><br><br>
+                <p>Can Host: <br> Events <br>Parties <br> Seminars <br> Up to 100 persons <br> For 10,000 Pesos Only</p>
+              </div>  
+              </div>
+          </div>
+</section>
+
+
+<!------------------------------------------BOOKING----------------------------------------------------------------------->
+<section class="booking" id="booking">
+      <div class="container">
+        <div class="text">
+          <div class="heading">
+            <h5>SIMPLE, FAST, SECURE BOOKING</h5>
+            <h2></h2>
+          </div>
+      <div class="form2">
+          <div class="form-text">
+              <h1>Book Now</h1>
+          </div>
+          <div class="book">
+              <form action="" method="get">
+                  <div>
+                      <span>Your full name ?</span>
+                      <input type="text" name="name" id="name" placeholder="Write your name here..." required>
+                  </div>
+                  <div>
+                      <span>Your email address ?</span>
+                      <input type="email" name="name" id="name" placeholder="Write your email here..." required> 
+                  </div>
+                  <div>
+                      <span>How many people ?</span>
+                      <input type="number" id="guests" name="guests" min="1" max="100" required>
+                  </div>
+                  <div>
+                      <span>What time ?</span>
+                      <input type="time" id="time" name="time" required>
+                  </div>
+                  <div>
+                      <span>What is the date ?</span>
+                      <input type="date" name="date" id="date" placeholder="date" required>
+                  </div>
+                  <div>
+                      <span>Your phone number ?</span>
+                      <input  name="number" id="number" placeholder="Write your number here..." required>
+                  </div>
+                  <div id="submit">
+                      <input type="submit" value="SUBMIT" id="submit">
+                  </div>
+              </form>
+          </div>
+      </div>
+</section>
+
+
+<!------------------------------------------CONTACT----------------------------------------------------------------------->
+<section>
+    <div class="container3" id="contact">
+      <span class="big-circle"></span>
+      <img src="images/shape.png" class="square" alt="" />
+      <div class="form3">
+        <div class="contact-info">
+          <h3 class="title">Let's get in touch</h3>
+          <div class="map-container">
+            <h3 class="title">Our Location</h3>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3912.5922965985637!2d122.61703857481282!3d11.291351188890399!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x33af6faacc7884e5%3A0x851d566afa629852!2sCaveland%20Nature%20Park!5e0!3m2!1sen!2sph!4v1730898544807!5m2!1sen!2sph" width="350" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>     
+        </div>
+        </div>
+        <div class="contact">
+          <span class="circle one"></span>
+          <span class="circle two"></span>
+
+          <article action="index.html" autocomplete="off">
+            <h3 class="title">Contact us</h3>
+            <div class="input-container">
+              <input type="text" name="name" class="input" />
+              <label for="">Username</label>
+              <span>Username</span>
+            </div>
+            <div class="input-container">
+              <input type="email" name="email" class="input" />
+              <label for="">Email</label>
+              <span>Email</span>
+            </div>
+            <div class="input-container">
+              <input type="tel" name="phone" class="input" />
+              <label for="">Phone</label>
+              <span>Phone</span>
+            </div>
+            <div class="input-container textarea">
+              <textarea name="message" class="input"></textarea>
+              <label for="">Message</label>
+              <span>Message</span>
+            </div>
+            <input type="submit" value="Send" class="btn" />
+          </article>
+        </div>
+      </div>
+    </div>
+</section>
+
+
+<!---------------------------------------------------------------FOOTER----------------------------------------------------------------------->
+<footer class="footer">
+    <div class="background">
+      <svg
+        version="1.1"
+        xmlns="http://www.w3.org/2000/svg"
+        xmlns:xlink="http://www.w3.org/1999/xlink"
+        x="0px"
+        y="0px"
+        width="100%"
+        height="100%"
+        viewBox="0 0 1600 900"
+      >
+        <defs>
+          <linearGradient id="bg" x2="0%" y2="100%">
+            <stop
+              offset="0%"
+              style="stop-color: rgba(88, 167, 54, 0.5);"
+            ></stop>
+            <stop
+              offset="100%"
+              style="stop-color: rgba(88, 167, 54, 0.5);"
+            ></stop>
+          </linearGradient>
+          <path
+            id="wave"
+            fill="url(#bg)"
+            d="M-363.852,502.589c0,0,236.988-41.997,505.475,0
+    s371.981,38.998,575.971,0s293.985-39.278,505.474,5.859s493.475,48.368,716.963-4.995v560.106H-363.852V502.589z"
+          />
+        </defs>
+        <g>
+          <use xlink:href="#wave" opacity=".3">
+            <animateTransform
+              attributeName="transform"
+              attributeType="XML"
+              type="translate"
+              dur="8s"
+              calcMode="spline"
+              values="270 230; -334 180; 270 230"
+              keyTimes="0; .5; 1"
+              keySplines="0.42, 0, 0.58, 1.0;0.42, 0, 0.58, 1.0"
+              repeatCount="indefinite"
+            />
+          </use>
+          <use xlink:href="#wave" opacity=".6">
+            <animateTransform
+              attributeName="transform"
+              attributeType="XML"
+              type="translate"
+              dur="6s"
+              calcMode="spline"
+              values="-270 230;243 220;-270 230"
+              keyTimes="0; .6; 1"
+              keySplines="0.42, 0, 0.58, 1.0;0.42, 0, 0.58, 1.0"
+              repeatCount="indefinite"
+            />
+          </use>
+          <use xlink:href="#wave" opacty=".9">
+            <animateTransform
+              attributeName="transform"
+              attributeType="XML"
+              type="translate"
+              dur="4s"
+              calcMode="spline"
+              values="0 230;-140 200;0 230"
+              keyTimes="0; .4; 1"
+              keySplines="0.42, 0, 0.58, 1.0;0.42, 0, 0.58, 1.0"
+              repeatCount="indefinite"
+            />
+          </use>
+        </g>
+      </svg>
+    </div>
+
+    <section class="socialmedia">
+      <ul class="socials">
+        <li><a class="fa-brands fa-facebook"></a></li>
+        <li><a class="fa-brands fa-instagram"></a></li>
+        <li><a class="fa-solid fa-phone"></a></li>
+        <li><a class="fa-solid fa-envelope"></a></li>
+      </ul>
+      <ul class="links">
+        <li><a>Home</a></li>
+        <li><a>About</a></li>
+        <li><a>Offers</a></li>
+        <li><a>Booking</a></li>
+        <li><a>Contact</a></li>
+      </ul>
+      <p class="legal">© 2024 All rights reserved</p>
+    </section>
+</footer>
+
+
+</body>
+<script src="index.js"></script>
+</html>
