@@ -8,7 +8,9 @@ html,
 body {
   font-family: 'Roboto Slab', serif;
   scroll-behavior: smooth;
+  width: 100%;
 }
+
 li {
   list-style: none;
 }
@@ -19,6 +21,7 @@ a {
   max-width: 1200px;
   margin: auto;
   padding: 0 20px;
+  
 }
 .flex {
   display: flex;
@@ -162,6 +165,7 @@ color: white;
 text-align: center;
 padding: 20px;
 height: 90vh;
+width: 100%;
 }
 .home-content {
 margin-bottom: 60px;
@@ -362,6 +366,7 @@ background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/200
 /*-------------------------------------------------------------------------------ABOUT-------------------------------------------------------*/
 .about {
   margin-bottom: 50px;
+  width: 100%;
 }
 
 .top {
@@ -1266,6 +1271,7 @@ a {
   justify-content: center;
   align-items: center;
   margin: 0 auto;
+  margin-left: -1%;
 }
 .form2{
   width: 650px;
