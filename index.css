@@ -8,9 +8,8 @@ html,
 body {
   font-family: 'Roboto Slab', serif;
   scroll-behavior: smooth;
-  width: 100%;
+  
 }
-
 li {
   list-style: none;
 }
@@ -21,7 +20,6 @@ a {
   max-width: 1200px;
   margin: auto;
   padding: 0 20px;
-  
 }
 .flex {
   display: flex;
@@ -36,21 +34,32 @@ a {
 /*-------------------------------------------------------------HEADER---------------------------------------------------*/
 header {
   height: 10vh;
-  background-color: rgb(255, 250, 250);
+  background-color: rgb(255, 244, 244);
+  animation: fadeInHeader 0.5s ease-in-out; /* Fade-in animation */
+  position: fixed; /* Make the header fixed */
+  top: 0; /* Position it at the top */
+  left: 0; /* Align to the left */
+  right: 0; /* Align to the right */
+  z-index: 1000; /* Ensure it stays above other content */
 }
+
 .logo img {
-    height: 50px;
-    border-radius: 50%;
+  height: 50px;
+  border-radius: 50%;
 }
+
 header nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding-top: 15px;
+  
 }
+
 .hambuger {
   display: none;
 }
+
 .bar {
   display: block;
   width: 25px;
@@ -59,30 +68,40 @@ header nav {
   transition: all 0.3s ease-in-out;
   background-color: #070606;
 }
+
 header ul {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
+
+
+
 header ul li {
-  margin-left: 3rem;
+  margin-left: 4rem;
+}
+
+
+
+.arrow-down {
+  font-size: 12px;
+  margin-left: 5px;
+}
+
+.dropdown {
+  position: relative; 
 }
 header ul li a {
   font-size: 1.2rem;
   font-weight: 400;
   color: rgb(10, 9, 9);
   transition: 0.5s;
+  letter-spacing: 3px;
 }
 header ul li a:hover {
   color: #096e1f;
+
   
-}
-.arrow-down {
-  font-size: 12px;
-  margin-left: 5px;
-}
-.dropdown {
-  position: relative; 
 }
 .dropdown-menu {
   display: none;
@@ -92,17 +111,46 @@ header ul li a:hover {
   background-color: rgb(255, 255, 255); 
   border-radius: 5px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  z-index: 10;
+  z-index: 5;
+  
   padding: 10px 10px;
   transition: background-color 0.3s, color 0.3s;
- line-height:5ch;
+  line-height: 5ch;
 }
+
+
+
+.dropdown li a {
+  padding: 10px 15px;
+  margin: 0;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+
 .dropdown.active .dropdown-menu {
   display: block; 
 }
+
 .dropdown:hover .dropdown-menu {
   display: block; 
 }
+
+
+.phone {
+  padding: 0;
+}
+
+.phone li {
+  display: inline-block;
+  padding: 5px;
+  margin-left: 5%;
+}
+
+.phone i {
+  color: #ff914d;
+  font-size: 25px;
+}
+
 
 @media only screen and (max-width: 768px) {
   header ul {
@@ -119,97 +167,122 @@ header ul li a:hover {
     box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
     z-index: 20;
   }
+
   header ul.active {
     left: 0%;
   }
+
   header ul li {
     margin: 2.5rem 0;
   }
+
   header ul li a {
     color: black;
   }
+
   .hambuger {
     display: block;
     cursor: pointer;
   }
+
   .hambuger.active .bar:nth-child(2) {
     opacity: 0;
   }
+
   .hambuger.active .bar:nth-child(1) {
     transform: translateY(8px) rotate(45deg);
   }
+
   .hambuger.active .bar:nth-child(3) {
     transform: translateY(-8px) rotate(-45deg);
   }
+
   .dropdown-menu {
     position: static; /* Adjust for mobile */
     display: none; /* Hide dropdown by default */
-}
-.dropdown.active .dropdown-menu {
+  }
+
+  .dropdown.active .dropdown-menu {
     display: block; /* Show dropdown when active */
-}
+  }
 }
 
 
 
 /********************************************************HOME*****************************************************************/
 .home-section {
-display: flex;
-flex-direction: column;
-align-items: center;
-justify-content: center;
-background-image: url('images/back.jpeg');
-background-size: cover;
-background-position: center;
-color: white;
-text-align: center;
-padding: 20px;
-height: 90vh;
-width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Align items to the left */
+  justify-content: center;
+  background-image: url('images/back2.png');
+  background-size: cover;
+  background-position: center;
+  color: white;
+  text-align: left; /* Change text alignment to left */
+  padding: 20px;
+  height: 80vh;
 }
+@keyframes slideIn {
+  from { transform: translateX(-100%); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+
 .home-content {
-margin-bottom: 60px;
-font-family: 'Roboto Slab', serif;
+  margin-bottom: 60px;
+  font-family: 'Roboto Slab', serif;
+  
 }
+
 .home-section h1 {
-font-size: 5.5em;
-margin-bottom: 20px;
-letter-spacing: 12px;  
-margin-top: 1%;
-font-family: 'Roboto Slab', serif;
+  font-size: 3.9em;
+  margin-bottom: 20px;
+  letter-spacing: 12px;  
+  margin-top: 12%;
+  margin-left: 15%;
+  font-family: 'Roboto Slab', serif;
+  color: #fff; /* Change to a contrasting color */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Add a shadow for better readability */
+  animation: slideIn 1s ease forwards; /* Animation for h1 */
+  line-height: 1.2; /* Adjust line height for better spacing */
 }
-.location {
-    width: 20px; 
-    height: 20px; 
-    border-radius: 50%;
-    display: inline-flex;
-    margin-right: -1.0%;
-}
+
+
+
 .home-section p {
-    font-size: 20px;
-    margin-top: -2%;
-    font-weight: 800;
-    letter-spacing: 4px;
-    font-family: 'Roboto Slab', serif;
-    margin-right: 2%;
+  font-size: 18px;
+  margin-top: 2%;
+  font-weight: 500;
+  margin-left: 15%;
+  font-weight: 600;
+  animation: slideIn 1s ease forwards; /* Animation for p */
+  animation-delay: 0.3s; /* Delay for p */
+  font-family: 'Roboto Slab', serif;
+  margin-right: 2%;
 }
+
 .head-btn {
   margin: 20px 0;
-  font-size: 20px;
+  font-size: 18px;
   font-weight: bold;
-  border: 3px solid rgba(127, 99, 55, 0.3);
+  margin-left: 15%;
   background: transparent;
   padding: 13px 40px;
-  background: #d7692574;
+  background: #15752abd;
   color: #fff;
   cursor: pointer;
+  margin-top: 2%;
   transition: var(--transition);
   font-family: 'Roboto Slab', serif;
   text-decoration: none; 
   display: inline-block; 
+  animation: slideIn 1s ease forwards; /* Animation for button */
+  animation-delay: 0.6s; /* Delay for button */
 }
+
 .head-btn:hover {
-  background: #15752abd;
+  background: rgba(234, 160, 49, 0.427);
+  color: rgb(255, 245, 245);
 }
 /***********************************************************HOME BOOKING***************************************************************/
 .booking-container {
@@ -219,15 +292,28 @@ align-items: center;
 width: 100%;
 }
 .booking-system {
+  position: relative; /* Required for positioning the pseudo-element */
 
-    margin-top: -1%;
-    background: rgba(219, 192, 151, 0.8);
-    padding: 30px;
-    border-radius: 80px;
-    width: 100%;
-    max-width: 97%;
-    height: 25vh;
-    margin-bottom: -3%;
+  background:rgba(219, 192, 151, 0.8) ;
+  padding: 30px;
+  width: 100%;
+  max-width: 100%;
+  height: 25vh;
+  margin-bottom: -8%;
+  z-index: 1; /* Ensure this is above the pseudo-element */
+ 
+}
+
+.booking-system::before {
+  content: ''; /* Required for pseudo-elements */
+  position: absolute; /* Position it relative to the parent */
+  top: 0; /* Align to the top */
+  left: 0; /* Align to the left */
+  right: 0; /* Align to the right */
+  bottom: 0; /* Align to the bottom */
+  background:rgba(219, 192, 151, 0.8) ; /* Shadow-like background (black with transparency) */
+  border-radius: 10px; /* Optional: Add rounded corners */
+  z-index: -1; /* Place behind the .booking-system */
 }
 .booking-form {
 display: flex;
@@ -247,7 +333,7 @@ flex-wrap: wrap;
     width: 90%;
     padding: 15px 20px;
     border: 5px solid #ff914d;
-    border-radius: 80px;
+   border-radius: 20px;
     margin-top: 10%;
     margin-right: 10%;
     margin-left: 10%;
@@ -257,68 +343,23 @@ flex-wrap: wrap;
 background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0z"/><path d="M7 10l5 5 5-5z"/></svg>');
 }
 .form-group .book-button {
-    background: #ff914d;
+    background:  #ff914d;
     color: white;
     border: none;
-    border-radius: 50px;
-    padding: 17px 60px;
+    padding: 20px 70px;
+    border-radius: 20px;
     cursor: pointer;
     margin-top: 10%;
     letter-spacing: 2px;  
+    margin-left: 10%;
     font-family: 'Roboto Slab', serif;
 }
 .form-group .book-button:hover {
-    background: #218838;
+    background:  #218838 ;
+    color: rgb(255, 255, 255);
 }
 
-@media (max-width: 1024px) and (min-width: 769px) {
-  .home-section {
-      height: auto; 
-      padding: 15px; 
-  }
-  .home-section h1 {
-      font-size: 4rem; 
-      margin-top: 5%; 
-  }
-  .location {
-      width: 15px; 
-      height: 15px; 
-  }
-  .home-section p {
-      font-size: 16px; 
-  }
-  .head-btn {
-      font-size: 18px; 
-      padding: 12px 30px; 
-  }
-  .booking-system {
-      height: auto; 
-      padding: 25px; 
-  }
-  .booking-form {
-      flex-direction: column; 
-      align-items: stretch; 
-  }
-  .form-group {
-      margin-right: 0; 
-      margin-bottom: -20%; 
-      width: 100%; 
-     
-  }
-  
-  .booking-system input,
-  .booking-system select { 
-      padding: 12px 15px; 
-      width: 100%; 
-      margin: 0; 
-  }
-  
-  .form-group .book-button {
-      width: 100%; 
-      padding: 15px; 
-      margin-top: 1%;
-  }
-}
+
 
 @media (max-width: 768px) {
     .home-section {
@@ -326,7 +367,8 @@ background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/200
     }
     .home-section h1{
      font-size: 3rem;
-     margin-top: 10%;
+     margin-top: 15%;
+     margin-left: 25%;
     }
     .location {
         width: 10px; 
@@ -336,11 +378,18 @@ background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/200
         margin-right: -1.0%;
     }
     .home-section p {
-        font-size: 10px;
+        font-size: 12px;
+        margin-left: 18%;
+        text-align: center;
+    
+}
+.head-btn{
+      margin-left: 25%;
 }
 .explore {
     font-size: 10px;
     padding: 10px 50px;
+   
 }
 
 .booking-system {
@@ -358,7 +407,7 @@ background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/200
 
 }
 .form-group .book-button {
-    padding: 12px 100px;
+    padding: 12px 126px;
     margin-right: -15%;
 }
 }
@@ -366,7 +415,8 @@ background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/200
 /*-------------------------------------------------------------------------------ABOUT-------------------------------------------------------*/
 .about {
   margin-bottom: 50px;
-  width: 100%;
+  
+
 }
 
 .top {
@@ -591,7 +641,7 @@ background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/200
 
 /*-------------------------------------------------------------------------------ABOUT RATES-------------------------------------------------------*/
 .conta {
-  max-width: 2500px;
+  width: 80%;
   margin: auto;
   background: white;
   padding: 20px;
@@ -637,6 +687,7 @@ tbody tr:hover {
   padding: 15px;
 }
 
+
 .rules-content {
   padding: 10px;
   text-align: justify;
@@ -650,6 +701,7 @@ tbody tr:hover {
   padding: 0;
 }
 
+
 .rules-content .rule-item {
   display: flex;
   flex-direction: column;
@@ -658,15 +710,16 @@ tbody tr:hover {
   border: 1px solid #218838;
   border-radius: 10px;
 }
-
 .rules-content .rule-image {
   margin-top: 5px;
+
 }
 
 .rules-content .rule-image img {
-  width: 50px; 
-  height: 50px; 
+  width: 80px; 
+  height: 80px; 
   border-radius: 5px;
+
 }
 
 @media (max-width: 1024px) { 
@@ -777,7 +830,7 @@ cursor: pointer;
 }
 .customer img{
   width: 100%;
-  height: 65vh;
+  height: 55vh;
   border-radius: 1%;
   margin: 25px auto;
 }
@@ -851,6 +904,7 @@ cursor: pointer;
 
 .wrapper h2 {
   font-weight: 400;
+  font-size: 40px;
 }
 
 .wrapper p {
@@ -1226,7 +1280,7 @@ a {
 }
 .pav img{
   width: 100%;
-  height: 50vh;
+  height: 45vh;
   border-radius: 1%;
   margin: 25px auto;
 }
@@ -1264,17 +1318,20 @@ a {
 
 /*-------------------------------------------------------BOOKING-------------------------------------------------------*/
 .booking{
-  background-image: url(background.jpg);
+  background-image: url(images/multi-position-green-paper-texture_64049-101.jpg);
+  background-repeat: no-repeat;
+  background-size: 100%;
  width: 100%;
   height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
   margin: 0 auto;
-  margin-left: -1%;
+  
 }
 .form2{
   width: 650px;
+  margin-left: 50%;
 }
 
 .form-text{
@@ -1303,7 +1360,7 @@ a {
 }
 .book div input {
   width: 100%;
-  border-radius: 20%;
+
   background: none;
   border: 2px solid #ff914d;;
   font-size: 20px;
@@ -1364,8 +1421,11 @@ border: none;
 /* Media query for phone sizes */
 @media screen and (max-width: 710px) {
   .booking {
-      height: auto; /* Allow height to adjust based on content */
+      height: 100vh; /* Allow height to adjust based on content */
       padding: 20px; /* Add some padding */
+      background-image: url(images/multi-position-green-paper-texture_64049-101.jpg);
+      background-repeat: no-repeat;
+      background-size: cover; /* Change to cover to ensure full-screen coverage */
   }
 
   .form2 {
@@ -1718,69 +1778,187 @@ textarea.input {
 }
 
 
+.bottom-bar {
 
-/*-----------------------------------------------FOOTER---------------------------------------------------*/
-.footer {
-  margin: 0;
-  font-family: "Euclid Circular A", "Poppins";
-  color: #0c0a0a;
+  display: flex;
+  justify-content: space-around; /* Aligns items evenly */
+  padding: 20px 0; /* Added padding for better spacing */
+  margin-top: 50px;
+  flex-wrap: wrap; /* Allows items to wrap on smaller screens */
+}
+
+.footer-content {
+  width: 30%; /* Adjusted width for better spacing */
+  text-align: center; /* Center text within each footer content */
+}
+
+.footer-content h3 {
+  font-size: 28px;
+  margin-bottom: 15px;
+}
+
+.footer-content p {
+  margin: 7px 0; /* Adjusted margins for better spacing */
+}
+
+.footer-content ul {
+  padding: 0;
+}
+
+.list {
+  padding: 0;
+}
+
+.list li {
+  list-style-type: none;
+  padding: 7px;
   position: relative;
 }
 
-.background {
+.list li::before {
+  content: '';
   position: absolute;
-  z-index: -1;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  top: 100%;
+  width: 0;
+  height: 2px;
+  background: #ff914d;
+  transition-duration: .5s;
 }
 
-.socialmedia ul {
-  display: flex;
-  list-style: none;
+.list li:hover::before {
+  width: 70px;
+}
+
+.social-icons {
   padding: 0;
+}
+
+.social-icons li {
+  display: inline-block;
+  padding: 5px;
+}
+
+.social-icons i {
+  color: rgb(1, 1, 1);
+  font-size: 25px;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  color: #ff914d;
+}
+
+.social-icons i:hover {
+  color: #ff914d;
+}
+
+.bottom-bar p {
+  color: #343434;
   margin: 0;
+  font-size: 16px;
+  padding: 7px;
+  text-align: center; /* Center the copyright text */
 }
 
-.socials {
-  gap: 20px;
+.copyright {
+  text-align: center; /* Center the copyright text */
+  color: #fffbfb; /* Set the text color */
+  font-size: 16px; /* Set the font size */
+  padding: 10px 0; /* Add some padding for spacing */
+  margin: 0; /* Remove default margin */
+  background-color: #508e5d;
 }
 
-.socials a {
-  font-size: 24px;
+/* Responsive styles */
+@media (max-width: 768px) {
+  .footer-content {
+    width: 100%; /* Stack footer content on smaller screens */
+    margin-bottom: 20px; /* Add space between sections */
+  }
+
+  .bottom-bar {
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center align items */
+  }
+
+  .footer-content h3 {
+    font-size: 24px; /* Adjust font size for headings */
+  }
+
+  .footer-content p, .bottom-bar p, .copyright {
+    font-size: 14px; /* Adjust font size for paragraphs */
+  }
+
+  .social-icons li {
+    padding: 10px; /* Increase padding for touch targets */
+  }
+
+  .social-icons i {
+    font-size: 20px; /* Adjust icon size for smaller screens */
+  }
 }
 
-.links {
-  gap: 10px;
+@media (max-width: 480px) {
+  .footer-content h3 {
+    font-size: 20px; /* Further adjust font size for very small screens */
+  }
+
+  .footer-content p, .bottom-bar p, .copyright {
+    font-size: 12px; /* Further adjust font size for very small screens */
+  }
 }
 
-.legal {
-  font-size: 12px;
-  margin: 0;
-}
 
-svg {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  transform: scaleY(3) scaleX(2.25);
-  transform-origin: bottom;
-  box-sizing: border-box;
-  display: block;
-  pointer-events: none;
-}
 
-footer {
-  position: fixed;
-  left: 0;
-  bottom: 12px;
-  display: flex;
-  width: 100%;
-  height: 370px;
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 section {
   display: flex;
@@ -1803,6 +1981,10 @@ section {
     gap: 20px;
   }
 }
+
+
+
+
  /*-------------------------------------------------------------------------------OTHER MEDIA------------------------------------------------------*/
   
   
