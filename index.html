@@ -11,7 +11,7 @@
   crossorigin="anonymous"
   referrerpolicy="no-referrer"/>
   
-  <link rel="icon" type="image/png" href="images/Circular_Fashion_Logo_in_Beige_Classic_Style-removebg-preview.png">
+  <link rel="icon" type="image/png" href="images/HOME/FAVICON.png">
 
 </head>
 
@@ -20,41 +20,39 @@
 
 
 <!---------------------------------------------NAVBAR---------------------------------------------------------------------------->
-  <header class="header" id="navigation-menu">
-    <div class="container">
-      <nav>
-        <a href="#" class="logo"> <img src="images/logo.jpg" alt=""> </a>
-          <ul class="nav-menu">
-            <li> <a href="#home" class="nav-link">HOME</a> </li>
-            <li> <a href="#about" class="nav-link">ABOUT</a> </li>
-            <li class="dropdown">
-        <a href="#" class="nav-link dropdown-toggle">OFFERS <span class="arrow-down">▼</span></a>
-          <ul class="dropdown-menu">
-            <li><a href="#caves" class="dropdown-link">CAVES</a></li>
-            <li><a href="#pool" class="dropdown-link">POOL</a></li>
-            <li><a href="#adventures" class="dropdown-link">ADVENTURES</a></li>
-            <li><a href="#rooms" class="dropdown-link">ROOMS</a></li>
+<nav class="navbar">
+  <div class="logo">
+      <img src="images/HOME/LOGO.jpg" alt="Logo">
+  </div>
+  
+  <div class="hamburger" id="hamburger">
+      <div></div>
+      <div></div>
+      <div></div>
+  </div>
+  
+  <ul class="menu" id="menu">
+      <li class="home"><a href="#home">HOME</a></li> <!-- HOME item -->
+      <li><a href="#about">ABOUT</a></li>
+      <li id="offers">
+          <a href="#offers" id="offers-link">OFFERS <span class="arrow-down">▼</span></a>
+          <ul class="dropdown" id="offers-dropdown">
+              <li><a href="#caves">CAVES</a></li>
+              <li><a href="#pool">POOL</a></li>
+              <li><a href="#adventures">ADVENTURES</a></li>
+              <li><a href="#rooms">ROOMS</a></li>
           </ul>
-            </li>
-            <li> <a href="#booking" class="nav-link">BOOKING</a> </li>
-            <li> <a href="#contact" class="nav-link">CONTACT</a> </li>
-         </ul>
-         <div>
+      </li>
+      <li><a href="#booking">BOOKING</a></li>
+      <li><a href="#contact">CONTACT</a></li>
+      <div>
           <ul class="phone">
             <li><a href=""><i class="fa-solid fa-phone"></i></a></li>
             <li><a href=""><i class="fa-solid fa-envelope"></i></a></li>
           </ul>
         </div>
-       
-
-          <div class="hambuger">
-              <span class="bar"></span>
-              <span class="bar"></span>
-              <span class="bar"></span>
-            </div>
-        </nav>
-      </div>
-  </header>
+  </ul>
+</nav>
 
 
 <!-------------------------------------------------HOME------------------------------------------------------------------------>
@@ -70,15 +68,16 @@
  <section>
   <div class="booking-container">
     <div class="booking-system">
-      <form class="booking-form" id="bookingForm">
+      <form action="index.php" method="post" class="booking-form">
           <div class="form-group">
+            <input type="hidden" name="form_type" value="form1">
             <input type="text" id="name" name="name" placeholder="Enter your name" required>
           </div>
           <div class="form-group date-placeholder">
-            <input type="date" id="date" name="date" required>
+            <input type="date" id="date" name="departure_date" required>
           </div>
           <div class="form-group">
-            <input type="time" id="time" name="time" required>
+            <input type="time" id="time" name="departure_time" required>
           </div>
           <div class="form-group">
             <input type="number" id="people" name="people" placeholder="Number of guests" required min="1" max="100">
@@ -96,10 +95,14 @@
 <section class="about top" id="about">
       <div class="container flex">
         <div class="left">
-          <div class="img">
-            <img src="images/entrance/entranceww.jpeg" alt="" class="image1">
-            <img src="images/resort and park.jpeg" alt="" class="image2">
-          </div>
+          <div class="gallery">
+            <img id="bigPhoto" src="images/ABOUT/3.jpeg" alt="Big Photo" class="big-photo">
+            <div class="small-photos">
+                <img src="images/ABOUT/3.jpeg" alt="Photo 1" class="small-photo" onclick="changePhoto('images/ABOUT/3.jpeg')">
+                <img src="images/ABOUT/299744373_1173500763213759_4270637127412127505_n.jpg" alt="Photo 2" class="small-photo" onclick="changePhoto('images/ABOUT/299744373_1173500763213759_4270637127412127505_n.jpg')">
+                <img src="images/ABOUT/4.jpeg" alt="Photo 3" class="small-photo" onclick="changePhoto('images/ABOUT/4.jpeg')">
+            </div>
+        </div>
         </div>
         <div class="right">
           <div class="text">
@@ -318,163 +321,163 @@
                       <li class="rule-item">
                           <span>Parking charge is Php. 50 for Private Vehicles; Php. 100 for UV and Php. 20 for Motorcycle and Tricycle.</span>
                           <div class="rule-image">
-                            <img src="images/parking-area (3).png" alt="Check-in Time">
+                            <img src="images/RULE ICONS/1.png" alt="Check-in Time">
                         </div>
                       </li>
                       <li class="rule-item">
                           <span>Observe proper swimming attire. (ALLOWED: Swim wear, white t-sirt, board shorts, swimming trunks, rash guard, spandex, or nylon.) (NOT ALOOWED: Colored t-sirts, denim or maongs, basketball shorts.)</span>
                           <div class="rule-image">
-                            <img src="images/no-clothes.png" alt="Check-in Time">
+                            <img src="images/RULE ICONS/2.png" alt="Check-in Time">
                         </div>
                       </li>
                       <li class="rule-item">
                           <span>Guest/s is required to rent a cottage if they stay overnight.</span>
                           <div class="rule-image">
-                            <img src="images/house.png" alt="Check-in Time">
+                            <img src="images/RULE ICONS/3.png" alt="Check-in Time">
                         </div>
                       </li>
                       <li class="rule-item">
                           <span>Jumping and diving in the pools is STRICTLY PROHIBITED</span>
                           <div class="rule-image">
-                            <img src="images/swimming.png" alt="Check-in Time">
+                            <img src="images/RULE ICONS/4.png" alt="Check-in Time">
                         </div>
                       </li>
                       <li class="rule-item">
                           <span>Firearms and deadly weapons are STRICTLY PROHIBITED.</span>
                           <div class="rule-image">
-                            <img src="images/no-weapons.png" alt="Check-in Time">
+                            <img src="images/RULE ICONS/5.png" alt="Check-in Time">
                         </div>
                       </li>
                       <li class="rule-item">
                           <span>Alcohol, cigarettes and prohibited drugs are STRICTLY PROHIBITED</span>
                           <div class="rule-image">
-                            <img src="images/no-alcohol.png" alt="Check-in Time">
+                            <img src="images/RULE ICONS/6.png" alt="Check-in Time">
                         </div>
                       </li>
                       <li class="rule-item">
                           <span>Persons who are under the influence of alcohol and drugs will be refused entry to the Park.</span>
                           <div class="rule-image">
-                            <img src="images/drinking.png" alt="Check-in Time">
+                            <img src="images/RULE ICONS/7.png" alt="Check-in Time">
                         </div>
                       </li>
                       <li class="rule-item">
                           <span>Our Park personnel have the authority to confiscate your cigarette, liquors or any alcoholic beverages.</span>
                           <div class="rule-image">
-                            <img src="images/teamwork.png" alt="Check-in Time">
+                            <img src="images/RULE ICONS/8.png" alt="Check-in Time">
                         </div>
                       </li>
                       <li class="rule-item">
                           <span>SMOKING AREA is provided near the parking area.</span>
                           <div class="rule-image">
-                            <img src="images/smoking-area.png" alt="Check-in Time">
+                            <img src="images/RULE ICONS/9.png" alt="Check-in Time">
                         </div>
                       </li>
                       <li class="rule-item">
                           <span>Do not leave you valuable things unattended.</span>
                           <div class="rule-image">
-                            <img src="images/person.png" alt="Check-in Time">
+                            <img src="images/RULE ICONS/10.png" alt="Check-in Time">
                         </div>
                       </li>
                       <li class="rule-item">
                           <span>NO guest/s can use the swimming pools when there's NO LIFE GUARD on duty.</span>
                           <div class="rule-image">
-                            <img src="images/no-lifeguard.png" alt="Check-in Time">
+                            <img src="images/RULE ICONS/11.png" alt="Check-in Time">
                         </div>
                       </li>
                       <li class="rule-item">
                           <span>Parents and Guardian are primary responsible for the behavior and safety of their children.</span>
                           <div class="rule-image">
-                            <img src="images/child.png" alt="Check-in Time">
+                            <img src="images/RULE ICONS/12.png" alt="Check-in Time">
                         </div>
                       </li>
                       <li class="rule-item">
                           <span>Children ages 10 years of age and below are not allowed to use the pools unless accompanied by an adult.</span>
                           <div class="rule-image">
-                            <img src="images/no-child-labor.png" alt="Check-in Time">
+                            <img src="images/RULE ICONS/13.png" alt="Check-in Time">
                         </div>
                       </li>
                       <li class="rule-item">
                           <span>Wearing of jewelries (e.g. necklace, earrings, anklets, bracelets) and any other metal objects are NOT ALLOWED in the Swimming pool.</span>
                           <div class="rule-image">
-                            <img src="images/diamond.png" alt="Check-in Time">
+                            <img src="images/RULE ICONS/14.png" alt="Check-in Time">
                         </div>
                       </li>
                       <li class="rule-item">
                           <span>A cleansing shower must be taken before entering the pool.</span>
                           <div class="rule-image">
-                            <img src="images/shower.png" alt="Check-in Time">
+                            <img src="images/RULE ICONS/15.png" alt="Check-in Time">
                         </div>
                       </li>
                       <li class="rule-item">
                           <span>Infants must wear swimsuits if in the pool. APPROVED SWIM DIAPERS ARE REQUIRED IF THEY ARE TAKEN IN THE WATER.</span>
                           <div class="rule-image">
-                            <img src="images/infant.png" alt="Check-in Time">
+                            <img src="images/RULE ICONS/16.png" alt="Check-in Time">
                         </div>
                       </li>
                       <li class="rule-item">
                           <span>No band aides or people with open wounds, stiches or skin diseases are allowed in the pool.</span>
                           <div class="rule-image">
-                            <img src="images/no-band-aid.png" alt="Check-in Time">
+                            <img src="images/RULE ICONS/17.png" alt="Check-in Time">
                         </div>
                       </li>
                       <li class="rule-item">
                           <span>In case of minor or major injuries, immediately report it to our park personnel. Resort clinic is located at CAVELAND’S OFFICE.</span>
                           <div class="rule-image">
-                            <img src="images/leg.png" alt="Check-in Time">
+                            <img src="images/RULE ICONS/18.png" alt="Check-in Time">
                         </div>
                       </li>
                       <li class="rule-item">
                           <span>NO LITTERING. Dispose your garbage properly.</span>
                           <div class="rule-image">
-                            <img src="images/sign.png" alt="Check-in Time">
+                            <img src="images/RULE ICONS/19.png" alt="Check-in Time">
                         </div>
                       </li>
                       <li class="rule-item">
                           <span>Any damages to the property of the resort due to improper use or negligence will be charge to the person/s concerned.</span>
                           <div class="rule-image">
-                            <img src="images/explosion.png" alt="Check-in Time">
+                            <img src="images/RULE ICONS/20.png" alt="Check-in Time">
                         </div>
                       </li>
                       <li class="rule-item">
                           <span>The lifeguard on duty has the authority to suspend pool privileges if rules are violated.</span>
                           <div class="rule-image">
-                            <img src="images/illegal.png" alt="Check-in Time">
+                            <img src="images/RULE ICONS/21.png" alt="Check-in Time">
                         </div>
                       </li>
                       <li class="rule-item">
                           <span>Any person who violates park regulations is subject to disciplinary action by our staff personnel/staff.</span>
                           <div class="rule-image">
-                            <img src="images/disciplinary.png" alt="Check-in Time">
+                            <img src="images/RULE ICONS/22.png" alt="Check-in Time">
                         </div>
                       </li>
                       <li class="rule-item">
                           <span>Ask staff when entering any of the caves or when they need a tour guide.</span>
                           <div class="rule-image">
-                            <img src="images/tour-guide.png" alt="Check-in Time">
+                            <img src="images/RULE ICONS/23.png" alt="Check-in Time">
                         </div>
                       </li>
                       <li class="rule-item">
                           <span>DO NOT TOUCH STALACTITES, ATALAGMITES OR BIRDS NEST INSIDE THE CAVES.</span>
                           <div class="rule-image">
-                            <img src="images/no-touch.png" alt="Check-in Time">
+                            <img src="images/RULE ICONS/24.png" alt="Check-in Time">
                         </div>
                       </li>
                       <li class="rule-item">
                           <span>Follow the load limits for the hanging bridge and No playing or jumping inside,</span>
                           <div class="rule-image">
-                            <img src="images/playing.png" alt="Check-in Time">
+                            <img src="images/RULE ICONS/25.png" alt="Check-in Time">
                         </div>
                       </li>
                       <li class="rule-item">
                           <span>Always walk on the right side of all walkways within the park.</span>
                           <div class="rule-image">
-                            <img src="images/marcher.png" alt="Check-in Time">
+                            <img src="images/RULE ICONS/26.png" alt="Check-in Time">
                         </div>
                       </li>
                       <li class="rule-item">
                           <span>Do not destroy, pick or remove any display, plants and stones/rocks in the park.</span>  
                           <div class="rule-image">
-                            <img src="images/tea.png" alt="Check-in Time">
+                            <img src="images/RULE ICONS/27.png" alt="Check-in Time">
                         </div>
                       </li> 
                   </ul>
@@ -499,26 +502,28 @@
             <div class = "customer">
                 <h3>MAN CAVE</h3><br><br>
                 <p>Man Cave is a spectacular refuge to visit and relax in privacy, gazing at the sky over the rock-forming bridge, supported by pillars and walls of stalactites and stalagmites. </p>
-                <img src = "images/caves/horror cave.jpeg" alt = "customer image">
+                <img src = "images/CAVES/1.jpeg" alt = "customer image">
             </div>
             <div class = "customer">
                 <h3>CHOCOLATE CAVE</h3><br><br>
-                <p>Chocolate Cave, its name was inspired by the color of the walls and stalactites nicely trickling.</p>
-                <img src = "images/caves/choocaaave.jpeg" alt = "customer image">
+                <p>Near to the swimming pool is a subterranean cave called the Chocolate Cave, its name was inspired by the color of the walls and stalactites nicely trickling.</p>
+                <img src = "images/CAVES/2.jpeg" alt = "customer image">
             </div>
             <div class = "customer">
                 <h3>RAINFOREST CAVE</h3><br><br>
-                <p> Rainforest Cave, a shelter cave used by natives (Aeta) while hunting deer, wild pig, monkey and even water monitor Lizard (halo). </p>
-                <img src = "images/caves/rainforestcave.png" alt = "customer image">
+                <p> Along the trail is the Rainforest Cave, a shelter cave used by natives (Aeta) while hunting deer, wild pig, monkey and even water monitor Lizard (halo). </p>
+                <img src = "images/CAVES/3.png" alt = "customer image">
             </div>
             <div class = "customer">
               <h3>HOLY CAVE</h3><br><br>
-              <p>Holy Cave, which houses a grotto that is shaped with a likeness to the Virgin Mary of Fatima, complete with a peaceful surrounding area that is suitable for praying and meditation. </p>
-              <img src = "images/caves/holycave.png" alt = "customer image">
+              <p>Holy Cave, which houses a grotto that is shaped with a likeness to the Virgin Mary of Fatima, complete with a peaceful surrounding area that is suitable for praying. </p>
+              <img src = "images/CAVES/4.png" alt = "customer image">
           </div>
         </div>
     </div>
 </section>
+
+
 
 
 <!----------------------------------------------POOL------------------------------------------------------------------------>
@@ -577,9 +582,9 @@
           <h2></h2>
           <p>Experience breathtaking views while walking high above the ground.</p>
           <div class="images">
-            <img src="images/adventures/skywalking/sky3.jpeg" alt="Hanging Bridge Adventure 1">
-              <img src="images/adventures/skywalking/sky2.jpeg" alt="Hanging Bridge Adventure 2">
-              <img src="images/adventures/skywalking/sky7.jpeg" alt="Hanging Bridge Adventure 3">
+            <img src="images/ADVENTURES/SKYWALKING 1.jpeg" alt="Hanging Bridge Adventure 1">
+              <img src="images/ADVENTURES/SKYWALKING 2.jpeg" alt="Hanging Bridge Adventure 2">
+              <img src="images/ADVENTURES/SKYWALKING 3.jpeg" alt="Hanging Bridge Adventure 3">
               
           </div>
       </div>
@@ -587,18 +592,18 @@
           <h2></h2>
           <p>Cross our thrilling hanging bridge surrounded by nature.</p>
           <div class="images">
-            <img src="images/adventures/hanging bridge/brigde2.jpeg" alt="Skywalking Adventure 1">
-            <img src="images/received_927355315872101.jpeg" alt="Skywalking Adventure 2">
-            <img src="images/brigde32.jpeg" alt="Skywalking Adventure 3">
+            <img src="images/ADVENTURES/BRIGDE 1.jpeg" alt="Skywalking Adventure 1">
+            <img src="images/ADVENTURES/BRIGDE 2.jpeg" alt="Skywalking Adventure 2">
+            <img src="images/ADVENTURES/BRIGDE 3.jpeg" alt="Skywalking Adventure 3">
           </div>
       </div>
       <div class="activity" id="zipline" style="display: none;">
          
           <p>Feel the adrenaline rush while soaring over the treetops.<br>(COMING SOON)</p>
           <div class="images">
-              <img src="images/mountain-zipline-pine-free-vector.jpg" alt="Zipline Adventure 1">
-              <img src="images/65cd383c43bad5e459c1c57f_Zipline-safety.jpg" alt="Zipline Adventure 2">
-              <img src="images/zipline-hero-1.png" alt="Zipline Adventure 3">
+              <img src="images/ADVENTURES/ZIPLINE 1.jpg" alt="Zipline Adventure 1">
+              <img src="images/ADVENTURES/ZIPLINE 2.jpg" alt="Zipline Adventure 2">
+              <img src="images/ADVENTURES/ZIPLINE 3.png" alt="Zipline Adventure 3">
           </div>
       </div>
 </section>
@@ -607,17 +612,18 @@
 <!---------------------------------------------ROOMS------------------------------------------------------------------------>
 <section>
   <div class="container" id="rooms">
- <div class="heading">
-  <h5>COSY, SCENIC, UNIQUE</h5>
-  <h2>ROOMS</h2>
-</div>
-</div>
+    <div class="heading">
+      <h5>COSY, SCENIC, UNIQUE</h5>
+      <h2>ROOMS</h2>
+    </div>
+  </div>
 </section>
 <section class="cards-wrapper">
   <div class="card-grid-space">
-    <div class="num">01</div>
-    <a class="card" href="#booking" style="--bg-img: url('images/rooms/room1/room1b.jpeg')">
+    <a class="card" href="#booking" style="--bg-img: url('images/ROOMS/ROOM 1A.jpeg')">
       <div>
+        <p class="description">TWIN CABIN<br>₱1200.OO<br>Good for 2 pax<br>With Aircon
+          </p>
         <div class="tags">
           <div class="tag">BOOK NOW</div>
         </div>
@@ -625,9 +631,10 @@
     </a>
   </div>
   <div class="card-grid-space">
-    <div class="num"></div>
-    <a class="card" href="#booking" style="--bg-img: url('images/rooms/room1/room 1a.jpeg')">
+    <a class="card" href="#booking" style="--bg-img: url('images/ROOMS/ROOM 1B.jpeg')">
       <div>
+        <p class="description">TWIN CABIN<br>₱1200.OO<br>Good for 2 pax<br>With Aircon
+        </p>
         <div class="tags">
           <div class="tag">BOOK NOW</div>
         </div>
@@ -635,9 +642,10 @@
     </a>
   </div>
   <div class="card-grid-space">
-    <div class="num"></div>
-    <a class="card" href="#booking" style="--bg-img: url('images/rooms/room1/room 1 cr.jpeg')">
+    <a class="card" href="#booking" style="--bg-img: url('images/ROOMS/ROOM 1C.jpeg')">
       <div>
+        <p class="description">TWIN CABIN<br>₱1200.OO <br>Good for 2 pax<br>With Aircon
+        </p>
         <div class="tags">
           <div class="tag">BOOK NOW</div>
         </div>
@@ -645,9 +653,10 @@
     </a>
   </div>
   <div class="card-grid-space">
-    <div class="num">02</div>
-    <a class="card" href="#booking" style="--bg-img: url('images/rooms/room2/room2b.jpeg')">
+    <a class="card" href="#booking" style="--bg-img: url('images/ROOMS/ROOM 2A.jpeg')">
       <div>
+        <p class="description">ROCK CABIN<br>₱2500.OO <br>Good for 4 pax<br>WIth Aircon
+        </p>
         <div class="tags">
           <div class="tag">BOOK NOW</div>
         </div>
@@ -655,9 +664,10 @@
     </a>
   </div>
   <div class="card-grid-space">
-    <div class="num"></div>
-    <a class="card" href="#booking" style="--bg-img: url('images/rooms/room2/room2.jpeg')">
+    <a class="card" href="#booking" style="--bg-img: url('images/ROOMS/ROOM 2B.jpeg')">
       <div>
+        <p class="description">ROCK CABIN<br>₱2500.OO <br>Good for 4 pax<br>WIth Aircon
+        </p>
         <div class="tags">
           <div class="tag">BOOK NOW</div>
         </div>
@@ -665,9 +675,11 @@
     </a>
   </div>
   <div class="card-grid-space">
-    <div class="num"></div>
-    <a class="card" href="#booking" style="--bg-img: url('images/rooms/room2/room2d.jpeg')">
+    
+    <a class="card" href="#booking" style="--bg-img: url('images/ROOMS/ROOM 2C.jpeg')">
       <div>
+        <p class="description">ROCK CABIN<br>₱2500.OO <br>Good for 4 pax<br>WIth Aircon
+        </p>
         <div class="tags">
           <div class="tag">BOOK NOW</div>
         </div>
@@ -675,9 +687,11 @@
     </a>
   </div>
   <div class="card-grid-space">
-    <div class="num">03</div>
-    <a class="card" href="#booking" style="--bg-img: url('images/rooms/room3/room3a.jpeg')">
+  
+    <a class="card" href="#booking" style="--bg-img: url('images/ROOMS/ROOM 3A.jpeg')">
       <div>
+        <p class="description">BAHAY KUBO<br>₱800.OO<br>Good for 2 pax<br>No aircon
+        </p>
         <div class="tags">
           <div class="tag">BOOK NOW</div>
         </div>
@@ -685,9 +699,11 @@
     </a>
   </div>
   <div class="card-grid-space">
-    <div class="num"></div>
-    <a class="card" href="#booking" style="--bg-img: url('images/rooms/room3/room3.jpeg')">
+   
+    <a class="card" href="#booking" style="--bg-img: url('images/ROOMS/ROOM 3B.jpeg')">
       <div>
+        <p class="description">BAHAY KUBO<br>₱800.OO<br>Good for 2 pax<br>No aircon
+        </p>
         <div class="tags">
           <div class="tag">BOOK NOW</div>
         </div>
@@ -695,9 +711,11 @@
     </a>
   </div>
   <div class="card-grid-space">
-    <div class="num"></div>
-    <a class="card" href="#booking" style="--bg-img: url('images/rooms/room3/room3.jpeg')">
+    
+    <a class="card" href="#booking" style="--bg-img: url('images/ROOMS/ROOM 3B.jpeg')">
       <div>
+        <p class="description">BAHAY KUBO<br>₱800.OO<br>Good for 2 pax<br>No aircon
+        </p>
         <div class="tags">
           <div class="tag">BOOK NOW</div>
         </div>
@@ -718,19 +736,19 @@
           <div class = "sec-width">
               <div class = "customers-container">
                   <div class = "pav">
-                    <img src = "images/rooms/pavillion/pavillion3.jpeg" alt = "customer image">  
+                    <img src = "images/ROOMS/PAVILLION 1.jpeg">  
                   </div>
                   <div class = "pav">
-                      <img src = "images/rooms/pavillion/pavillion66.jpeg" alt = "customer image">
+                    <img src = "images/ROOMS/PAVILLION 2.jpeg"> 
                   </div>
                   <div class = "pav">
-                       <img src = "images/rooms/pavillion/pavillion 4.jpeg" alt = "customer image">
+                    <img src = "images/ROOMS/PAVILLION 3.jpeg"> 
                   </div>
                   <div class = "pav">
-                    <img src = "images/rooms/pavillion/pavillion1.jpeg" alt = "customer image">
+                    <img src = "images/ROOMS/PAVILLION 4.jpeg"> 
                 </div>
                 <div class = "pav">
-                  <img src = "images/rooms/pavillion/pavillion5.jpeg" alt = "customer image">
+                  <img src = "images/ROOMS/PAVILLION 5.jpeg"> 
               </div>
               <div class = "pav">
                 <h3>PAVILLION</h3><br><br>
@@ -743,87 +761,87 @@
 
 <!------------------------------------------BOOKING----------------------------------------------------------------------->
 <section class="booking" id="booking">
-     
-      <div class="form2">
-          <div class="form-text">
-              <h1>BOOK NOW</h1>
-          </div>
-          <div class="book">
-              <form action="" method="get">
-                  <div>
-                      <span>Your full name ?</span>
-                      <input type="text" name="name" id="name" placeholder="Write your name here..." required>
-                  </div>
-                  <div>
-                      <span>Your email address ?</span>
-                      <input type="email" name="name" id="name" placeholder="Write your email here..." required> 
-                  </div>
-                  <div>
-                      <span>How many people ?</span>
-                      <input type="number" id="guests" name="guests" min="1" max="100" required>
-                  </div>
-                  <div>
-                      <span>What time ?</span>
-                      <input type="time" id="time" name="time" required>
-                  </div>
-                  <div>
-                      <span>What is the date ?</span>
-                      <input type="date" name="date" id="date" placeholder="date" required>
-                  </div>
-                  <div>
-                      <span>Your phone number ?</span>
-                      <input  name="number" id="number" placeholder="Write your number here..." required>
-                  </div>
-                  <div id="submit">
-                      <input type="submit" value="SUBMIT" id="submit">
-                  </div>
-              </form>
-          </div>
-      </div>
+  <div class="form2">
+    <div class="form-text">
+      <h1>BOOK NOW</h1>
+    </div>
+    <div class="book">
+      <form action="index.php" method="post">
+        <div>
+          <input type="hidden" name="form_type" value="form2">
+          <span>Name</span>
+          <input type="text" name="name" id="name" required>
+        </div>
+        <div>
+          <span>Email</span>
+          <input type="email" name="email" id="email" required> 
+        </div>
+        <div>
+          <span>People</span>
+          <input type="number" id="guests" name="people" min="1" max="100" required>
+        </div>
+        <div>
+          <span>Time</span>
+          <input type="time" id="time" name="departure_time" required>
+        </div>
+        <div>
+          <span>Date</span>
+          <input type="date" name="departure_date" id="date" placeholder="date" required>
+        </div>
+        <div>
+          <span>Phone Number</span>
+          <input name="phone" id="phone" required>
+        </div>
+        <div id="submit">
+          <input type="submit" value="SUBMIT" id="submit-button">
+        </div>
+      </form>
+    </div>
+  </div>
 </section>
-
 
 <!------------------------------------------CONTACT----------------------------------------------------------------------->
 <section>
     <div class="container3" id="contact">
       <span class="big-circle"></span>
-      <img src="images/shape.png" class="square" alt="" />
+      <img src="images/CONTACT/BACKGROUND.png" class="square" alt="" >
       <div class="form3">
         <div class="contact-info">
-          <h3 class="title">Let's get in touch</h3>
+          <h3 class="title">Our Location</h3>
           <div class="map-container">
-            <h3 class="title">Our Location</h3>
+           
             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3912.5922965985637!2d122.61703857481282!3d11.291351188890399!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x33af6faacc7884e5%3A0x851d566afa629852!2sCaveland%20Nature%20Park!5e0!3m2!1sen!2sph!4v1730898544807!5m2!1sen!2sph" width="350" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>     
         </div>
         </div>
         <div class="contact">
-          <span class="circle one"></span>
-          <span class="circle two"></span>
-
-          <article action="index.html" autocomplete="off">
+          <div class="article">
+          <form method="POST" action="index.php">
+            <input type="hidden" name="form_type" value="form3">
             <h3 class="title">Contact us</h3>
             <div class="input-container">
-              <input type="text" name="name" class="input" />
-              <label for="">Username</label>
-              <span>Username</span>
+                <input type="text" name="name" class="input" required />
+                <label for="">Username</label>
+                <span>Username</span>
             </div>
             <div class="input-container">
-              <input type="email" name="email" class="input" />
-              <label for="">Email</label>
-              <span>Email</span>
+                <input type="email" name="email" class="input" required />
+                <label for="">Email</label>
+                <span>Email</span>
             </div>
             <div class="input-container">
-              <input type="tel" name="phone" class="input" />
-              <label for="">Phone</label>
-              <span>Phone</span>
+                <input type="tel" name="phone" class="input" required />
+                <label for="">Phone</label>
+                <span>Phone</span>
             </div>
             <div class="input-container textarea">
-              <textarea name="message" class="input"></textarea>
-              <label for="">Message</label>
-              <span>Message</span>
+                <textarea name="message" class="input" required></textarea>
+                <label for="">Message</label>
+                <span>Message</span>
             </div>
             <input type="submit" value="Send" class="btn" />
-          </article>
+        </form>
+        </div>
+      
         </div>
       </div>
     </div>

@@ -1,46 +1,28 @@
-
-//DROPDOWN
-const dropdownToggles = document.querySelectorAll('.dropdown-toggle');
-  
-dropdownToggles.forEach((toggle) => {
-    toggle.addEventListener("click", function(event) {
-        event.preventDefault(); 
-        const dropdown = toggle.parentElement; 
-        dropdown.classList.toggle("active"); 
-    });
+document.getElementById("hamburger").addEventListener("click", function() {
+    const menu = document.getElementById("menu");
+    menu.classList.toggle("show");
 });
 
-// Optional: Close dropdown when clicking outside
-document.addEventListener("click", function(event) {
-    const isClickInside = dropdownToggles[0].parentElement.contains(event.target);
-    if (!isClickInside) {
-        dropdownToggles.forEach((toggle) => {
-            const dropdown = toggle.parentElement;
-            dropdown.classList.remove("active"); 
-        });
+document.getElementById("offers-link").addEventListener("click", function(event) {
+    event.preventDefault();
+    const dropdown = document.getElementById("offers-dropdown");
+    dropdown.classList.toggle("show");
+    const isShown = dropdown.classList.contains("show");
+
+    const bookingMenu = document.querySelector('li:contains("Booking")');
+    const contactMenu = document.querySelector('li#contact');
+    if (isShown) {
+        bookingMenu.style.display = 'none';
+    } else {
+        bookingMenu.style.display = 'block';
     }
 });
-   
 
-//HAMBURGER
-    const hambuger = document.querySelector('.hambuger');
-    const navMenu = document.querySelector('.nav-menu');
-    
-    hambuger.addEventListener("click", mobileMenu);
-    
-    function mobileMenu() {
-      hambuger.classList.toggle("active");
-      navMenu.classList.toggle("active");
-    }
-    
-    const navLink = document.querySelectorAll('.nav-link');
-    navLink.forEach((n) => n.addEventListener("click", closeMenu));
-    
-    function closeMenu() {
-      hambuger.classList.remove("active");
-      navMenu.classList.remove("active");
-    }
-    
+
+
+function changePhoto(photo) {
+  document.getElementById('bigPhoto').src = photo;
+}
 
 //ACCORDION ABOUT
     var accItem = document.getElementsByClassName('accordionItem');
